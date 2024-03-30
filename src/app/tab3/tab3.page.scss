@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+ion-content {
+  .welcome-section,
+  .services-section,
+  .contact-section {
+    padding: 20px;
+    text-align: center;
+
+
+    h1, h2 {
+      color: #333;
+    }
+
+    p {
+      color: #555;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+
+      li {
+        margin: 10px 0;
+      }
+    }
+  }
+}
+.services-section p{
+ border-top: solid 2px rgb(142, 142, 142);
+ padding-top: 10px;
+
+}
+
+iframe{
+  width: 100%;
+}
+
+
+ion-content {
+  //  .welcome-section,
+   // .services-section,
+   // .contact-section {
+
+      text-align: center;
+      color: #ffffff;
+      font-size: 20px;
+
+      height: 100vh;
+      font-family: 'Bebas Neue', sans-serif !important;
+
+    }
+  // }
+
+
+
+
+  .carousel {
+    overflow: hidden;
+    height: 200px;
+    border-radius: 5px;
+
+
+    .carousel-inner {
+      display: flex;
+      width: 100%; // Ajuste este valor conforme o número de itens
+      animation: scroll 60s linear infinite;
+      border: solid black;
+
+
+
+      .carousel-item {
+        width: 100; // Isso deve ser ajustado com base no número de itens
+        flex: 0 0 auto;
+        text-align: center;
+
+
+        // Estilize conforme necessário
+      }
+    }
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    40.333% {
+      transform: translateX(-100%); // Mova para o primeiro item
+    }
+
+    66.666% {
+      transform: translateX(-140%); // Mova para o segundo item
+    }
+
+    100% {
+      transform: translateX(-180%); // Volte ao início
+    }
+  }
+
+  img {
+    background-size: cover;
+  }
+
+
+  .flex{
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+  }
+
+  .content-overlay {
+    background: #f5f5f5;
+    padding: 20px;
+
+    .welcome-section, .services-section, .contact-section {
+      background: white;
+      padding: 40px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+
+      h1, h2 {
+        color: #000000;
+        margin-bottom: 20px;
+      }
+
+      p, li {
+        color: #efefef;
+        line-height: 1.6;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li:before {
+          content: "✔";
+          color: #5cb85c;
+          margin-right: 10px;
+        }
+      }
+    }
+
+    .services-section, .contact-section{
+      width: 40%;
+      margin-bottom: 50px;
+      background: url("../../assets/icon/img5.png") no-repeat center center;
+    }
+
+
+
+    .contact-section {
+      width:50%;
+      form {
+        display: flex;
+        flex-direction: column;
+
+        input, textarea {
+          margin-bottom: 20px;
+          padding: 15px;
+          border: 1px solid #ddd;
+          border-radius: 4px;
+          font-size: 16px;
+          &:focus {
+            outline: none;
+            border-color: #5cb85c;
+          }
+        }
+
+        button {
+          background: #5cb85c;
+          color: white;
+          padding: 15px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 18px;
+          transition: background-color 0.3s;
+
+          &:hover {
+            background: darken(#5cb85c, 10%);
+          }
+        }
+      }
+    }
+  }
+
+
+  .logoContainer {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    margin-left: 85%;
+    margin-top: -0%;
+    z-index: 9;
+    .logo{
+      display: flex;
+      height: 200px;
+      width: 200px;
+      background-color: #000;
+      background: url("../../assets/icon/logo.jpeg") no-repeat center center;
+      background-size: cover;
+      border-radius: 50%;
+    }
+  }
+  // Media queries para responsividade
+  @media (max-width: 653px) {
+    .logoContainer {
+      display: flex;
+      justify-content: flex-end;
+      margin-left: 65%;
+      margin-top: 3%;
+      .logo{
+        display: flex;
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        background-color: #000;
+      }
+    }
+    .carousel {
+      overflow: hidden;
+      height: 100px;
+      border-radius: 5px;
+    }
+
+    .flex{
+      flex-direction: column;
+    }
+    .services-section, .contact-section{
+      width: 100% !important;
+      margin-bottom: 50px;
+
+    }
+    .content-overlay {
+      padding: 10px;
+
+      .welcome-section, .services-section, .contact-section {
+        padding: 20px;
+      }
+    }
+  }
+

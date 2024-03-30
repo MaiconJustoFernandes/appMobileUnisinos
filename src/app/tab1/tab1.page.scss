@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Bebas Neue', sans-serif !important;
+  background: url("../../assets/icon/img5.png") no-repeat center center;
+  background-size: cover;
+  margin: 0;
+  padding: 5%;
+  justify-content: flex-start;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+
+  .hero-image {
+    background-size: cover;
+    padding: 1%;
+
+    .hero-text {
+      color: white;
+      max-width: 90%;
+
+      h1 {
+        font-size: 5vw;
+      }
+
+      p {
+        font-size: 2vw;
+      }
+    }
+
+    .info-section {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 5%;
+
+      .trail {
+        background: rgba(255, 255, 255, 0.8);
+        padding: 1%;
+        width: 40%;
+
+        h2 {
+          font-size: 2.5vw;
+        }
+
+        p {
+          font-size: 1vw;
+        }
+      }
+    }
+
+    .cta-button {
+      margin-top: 5%;
+
+      button {
+        background: #000;
+        color: #fff;
+        border: none;
+        padding: 1vw;
+        font-size: 2vw;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background: #333;
+        }
+      }
+    }
+  }
+}
+
+.footer-bottom {
+
+  margin-top: 6%;
+  align-items: center;
+  text-align: center;
+  justify-content:flex-end;
+
+
+  p {
+    margin: 0;
+    font-size: 1vw;
+  }
+}
+
+
+.logoContainer {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  margin-left: 90%;
+  margin-top: -4%;
+  .logo{
+    display: flex;
+    height: 200px;
+    width: 200px;
+    background-color: #000;
+    background: url("../../assets/icon/logo.jpeg") no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+  }
+}
+
+// Media queries for larger screens
+@media (max-width: 768px) {
+
+  body{
+    display: flex;
+    position: relative;
+    justify-content:space-between;
+
+  }
+
+  .container {
+
+    .logoContainer {
+      display: flex;
+      justify-content: flex-end;
+      margin-left: 73%;
+      margin-top: 0%;
+      justify-content: none;
+      position: none;
+      .logo{
+        display: flex;
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        background-color: #000;
+      }
+    }
+    .hero-image {
+      padding: 5%;
+
+      .hero-text {
+        max-width: 500px;
+
+        h1 {
+          font-size: 2em;
+        }
+
+        p {
+          font-size: 1.2em;
+        }
+      }
+
+      .info-section {
+        flex-direction: column-reverse;
+        justify-content: space-between;
+
+        .trail {
+          padding: 5px;
+          width: 100%;
+          margin: 1%;
+          //height: 50%;
+
+          h2 {
+            font-size: 1.0em;
+          }
+
+          p {
+            font-size: 0.8em;
+          }
+        }
+      }
+
+      .cta-button button {
+        padding: 15px 30px;
+        font-size: 1em;
+      }
+    }
+  }
+
+  .footer-bottom {
+    p {
+      font-size: 0.6em;
+
+    }
+  }
+}
